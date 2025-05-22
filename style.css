@@ -1,6 +1,6 @@
 /* Font Montserrat (Paragraphs) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/* Font Exile (Logo) */
+/* Font Poetsen One (Logo) */
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
 /* VARIABLES */
@@ -10,7 +10,7 @@
   --soft-black: #050614;
   --white: #fff;
   --font-montserrat: "Montserrat";
-  --font-exile: "Poetsen One";
+  --font-poetsen-one: "Poetsen One";
 }
 
 /* INITIAL STYLES */
@@ -30,7 +30,7 @@ body {
 }
 
 section {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 textarea {
@@ -49,17 +49,25 @@ textarea {
 .header {
   color: var(--white);
   width: 100%;
+  padding: 80px 0 0 0;
 }
 
 .navbar {
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  inset: 0;
+  margin: 0 auto;
+  background-color: var(--soft-black);
+  z-index: 99;
+
+  border-bottom: 1px solid var(--grey);
 }
 
 .nav__logo .nav__logo--text {
-  font-family: var(--font-exile);
+  font-family: var(--font-poetsen-one);
   font-size: clamp(16px, 2vw, 22px);
   letter-spacing: 2px;
   text-shadow: 1px 1px 6px var(--soft-blue);
@@ -148,7 +156,7 @@ textarea {
   display: block;
   width: 600px;
   height: 600px;
-  filter: drop-shadow(10px 10px 10px var(--soft-blue));
+  filter: drop-shadow(6px 6px 6px var(--soft-blue));
   transform: scale(1.1);
 
   animation-name: floating;
@@ -196,8 +204,7 @@ textarea {
 }
 
 .projects .projects__texts {
-  width: 60%;
-  min-width: 400px;
+  width: 90%;
   text-align: center;
 }
 
@@ -527,12 +534,51 @@ form input[type="submit"]:hover {
   }
 }
 
-@media only screen and (max-width: 678px) {
-  section {
+@media only screen and (max-width: 724px) {
+  .header {
     padding: 60px 0;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+
+  .about__me--button {
+    font-size: 20px;
   }
 
   .contact__title {
     text-align: center;
+  }
+
+  #hamburguer__menu {
+    display: block;
+    z-index: 150;
+  }
+
+  .nav__links {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--soft-black);
+    z-index: 100;
+    transform: translate(-100%);
+    pointer-events: none;
+
+    transition: 500ms ease  ;
+  }
+
+  .active {
+    pointer-events: unset;
+    transform: translate(0);
+  }
+
+  .nav__links li a {
+    font-size: 30px;
   }
 }
