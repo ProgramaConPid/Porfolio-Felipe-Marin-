@@ -1,15 +1,15 @@
-<!-- Step 2 -->
+<!-- Step 2 (Basic HTML Structure) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS File -->
   <link rel="stylesheet" href="style.css">
   <!--  Favicon -->
   <link rel="shortcut icon" href="imgs/img-felipe-marin.png" type="image/x-icon">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <!-- JavaScript File -->
   <title>Portfolio Web | Felipe Marin</title>
 </head>
 <body>
@@ -19,80 +19,102 @@
     <nav class="navbar container">
       <div class="nav__logo">
         <h2 class="nav__logo--text">
-          Felipe Marin - Riwi Developer
+          Felipe Marin
         </h2>
       </div>
 
       <i class="bi bi-list" id="hamburguer__menu"></i>
 
-      <!-- Navigation Menu - Step 12 -->
+      <!-- Navigation Menu - Step 12 (Navigation Menu) -->
       <ul class="nav__links">
         <li class="nav__link"><a href="#about__me">Acerca de mi</a></li>
+        <li class="nav__link"><a href="#skills">Habilidades</a></li>
         <li class="nav__link"><a href="#projects">Proyectos</a></li>
         <li class="nav__link"><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
 
-    <!-- Section About Me -->
+    <!-- Section About Me - Step 4 (Section About Me) -->
     <section class="about__me container" id="about__me">
       <div class="about__me--texts">
-        <!-- Step 3 -->
+        <!-- Step 3 (Main Page Title) -->
         <h1 class="about__me--title">
           Desarrollador De Software & <span>UI Designer</span>
         </h1>
         <p class="about__me--description">
-          Hola!, mi nombre es <span>Juan Felipe Marin Molina</span> y soy desarrollador de software junior,
+          Hola!, mi nombre es <span>Juan Felipe Marin Molina</span> de Riwi y soy desarrollador de software junior,
           me gusta crear paginas webs y aplicaciones completamente escalabes y asombrosas
           , actualmente estoy enfocado en el desarrollo web con tecnologias como HTML, CSS y JS.
         </p>
-        <button class="about__me--button">
+        <a class="about__me--button" href="#contact">
           Contactame!
-        </button>
+        </a>
       </div>
-      <!-- Step 4 -->
+      <!-- Step 5 (Profile Image) -->
       <div class="about__me--image">
         <img src="imgs/img-felipe-marin.png" alt="Imagen Felipe Marin">
       </div>
     </section>
   </header>
 
-  <section class="skills container">
-    <h2 class="skill__title">Habilidades y Tecnologias que manejo</h2>
+  <!-- Section Skills -->
+  <section class="skills container" id="skills">
+    <h2 class="skills__title title">Habilidades y Tecnologias que manejo</h2>
 
+    <!-- Step 6 (Skills List) -->
     <ul class="skills__list">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li class="skill">
+        <img src="icons/html5-brands.svg" alt="Icono HTML5">
+        HTML
+      </li>
+      <li class="skill">
+        <img src="icons/css3-alt-brands.svg" alt="Icono CSS3">
+        CSS
+      </li>
+      <li class="skill">
+        <img src="icons/js-brands.svg" alt="Icono JavaScript">
+        JavaScript
+      </li>
+      <li class="skill">
+        <img src="icons/python-brands.svg" alt="Icono Python">
+        Python
+      </li>
+      <li class="skill">
+        <img src="icons/git-alt-brands.svg" alt="Icono Git">
+        Git
+      </li>
+      <li class="skill">
+        <img src="icons/github-brands.svg" alt="Icono GitHub class="skill"">
+        GitHub
+      </li>
     </ul>
   </section>
 
-  <!-- Section Projects - Step 7 -->
+  <!-- Section Projects - Step 7 (Projects Section) -->
   <section class="projects container" id="projects">
 
     <!-- Info Projects -->
     <div class="projects__texts">
-      <h2 class="projects__title">
+      <h2 class="projects__title title">
         Proyectos recientes
       </h2>
 
       <p class="projects__description">
-        A continuacion te mostrare algunos de los proyectos mas recientes que he desarrollado
+        A continuacion te mostrare algunos de los 
+        proyectos mas recientes que he desarrollado
         usando las tecnologias HTML, CSS y JavaScript, 
-        tienes un proyecto en mente?, <a href="#">Contactame!</a>
+        tienes un proyecto en mente?, <a href="#contact">Contactame!</a>
       </p>
     </div>
 
     <!-- Projects -->
     <div class="container__projects">
+
       <div class="first__project box">
-        <!-- Step 8 -->
+        <!-- Step 8 (Project Image) -->
         <img src="imgs/diseño.jpg" alt="Imagen Web Diseño">
 
-        <h3 class="first__project--title title">
+        <h3 class="first__project--title box__title">
           Sitio web de diseños
         </h3>
 
@@ -100,15 +122,35 @@
           Sitio web responsive enfocado a brindar soluciones en arquitectura para los hogares colombianos.
         </p>
 
-        <button class="first__project--button button">
-          Ver el sitio web <i class="bi bi-arrow-right"></i>
-        </button>
+        <div class="first__project--info project__info">
+          <a href="#" class="first__project--button button">
+            Ir <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <!-- Step 9 (Table) -->
+          <table class="first__project--table"">
+            <tr>
+              <th>Tecnologias Usadas</th>
+            </tr>
+            <tr>
+              <td>HTML</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+            </tr>
+          </table>
+        </div>
+
       </div>
+
       <div class="second__project box">
-        <!-- Step 8 -->
+        <!-- Step 8 (Project Image) -->
         <img src="imgs/petology.jpeg" alt="Imagen Web de mascotas">
 
-        <h3 class="second__project--title title">
+        <h3 class="second__project--title box__title">
           Veterinaria
         </h3>
 
@@ -118,15 +160,34 @@
           y programar revisiones.
         </p>
 
-        <button class="second__project--button button">
-          Ver el sitio web <i class="bi bi-arrow-right"></i>
-        </button>
+        <div class="second__project--info project__info">
+          <a href="#" class="second__project--button button">
+            Ir <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <!-- Step 9 (Table) -->
+          <table class="second__project--table"">
+            <tr>
+              <th>Tecnologias Usadas</th>
+            </tr>
+            <tr>
+              <td>HTML</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+            </tr>
+          </table>
+        </div>
       </div>
+
       <div class="third__project box">
-        <!-- Step 8 -->
+        <!-- Step 8 (Project Image) -->
         <img src="imgs/traveler.jpeg" alt="Imagen Web Agencia De Viajes">
 
-        <h3 class="third__project--title title">
+        <h3 class="third__project--title box__title">
           Agencia de viajes
         </h3>
 
@@ -136,16 +197,34 @@
           hoteles (paquetes, promociones, etc.)
         </p>
 
-        <button class="third__project--button button">
-          Ver el sitio web <i class="bi bi-arrow-right"></i>
-        </button>
+        <div class="third__project--info project__info">
+          <a href="#" class="third__project--button button">
+            Ir <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <!-- Step 9 (Table) -->
+          <table class="third__project--table"">
+            <tr>
+              <th>Tecnologias Usadas</th>
+            </tr>
+            <tr>
+              <td>HTML</td>
+            </tr>
+            <tr>
+              <td>Tailwind CSS</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section class="contact container" id="contact">
-    <h2 class="contact__title">
+    <h2 class="contact__title title">
       Enviame un mensaje
     </h2>
 
@@ -166,11 +245,11 @@
           +57 305-484-4782
         </p>
 
-        <a href="mailto: juanfelipemm2004@gmail.com">
+        <a class="contact__info--email" href="mailto: juanfelipemm2004@gmail.com">
           juanfelipemm2004@gmail.com
         </a>
 
-        <!-- Social Media - Step 11 -->
+        <!-- Social Media - Step 11 (Social Media Links) -->
         <div class="contact__info--social-media">
           <a href="https://facebook.com/" target="_blank">
             <i class="bi bi-facebook"></i>
@@ -187,7 +266,7 @@
         </div>
       </div>
 
-      <!-- Form - Step 10 --> 
+      <!-- Form - Step 10 (Contact Form) --> 
       <div class="contact__form">
         <form action="#" method="post">
           <div class="form__group">
@@ -217,6 +296,7 @@
     <span class="copy">&#169; 2025 | Felipe Marin</span>
   </footer>
 
+  <!-- JavaScript File -->
   <script src="main.js"></script>
 </body>
 </html>
