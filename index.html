@@ -1,302 +1,370 @@
 <!-- Step 2 (Basic HTML Structure) -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS File -->
-  <link rel="stylesheet" href="style.css">
-  <!--  Favicon -->
-  <link rel="shortcut icon" href="imgs/img-felipe-marin.png" type="image/x-icon">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <title>Portfolio Web | Felipe Marin</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Felipe Marin" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <!--  Favicon -->
+    <link
+      rel="shortcut icon"
+      href="imgs/img-felipe-marin.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <title>Portfolio Web | Felipe Marin</title>
+  </head>
+  <body>
+    <!-- Section Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar__container container">
+          <div class="nav__logo">
+            <h2 class="nav__logo--text">Felipe Marin</h2>
+          </div>
 
-  <!-- Section Header -->
-  <header class="header">
-    <nav class="navbar container">
-      <div class="nav__logo">
-        <h2 class="nav__logo--text">
-          Felipe Marin
-        </h2>
-      </div>
+          <i class="bi bi-list" id="hamburguer__menu"></i>
 
-      <i class="bi bi-list" id="hamburguer__menu"></i>
+          <!-- Navigation Menu - Step 12 (Navigation Menu) -->
+          <ul class="nav__links">
+            <li class="nav__link"><a href="#about__me">About Me</a></li>
+            <li class="nav__link"><a href="#skills">Skills</a></li>
+            <li class="nav__link"><a href="#projects">Projects</a></li>
+            <li class="nav__link"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
 
-      <!-- Navigation Menu - Step 12 (Navigation Menu) -->
-      <ul class="nav__links">
-        <li class="nav__link"><a href="#about__me">Acerca de mi</a></li>
-        <li class="nav__link"><a href="#skills">Habilidades</a></li>
-        <li class="nav__link"><a href="#projects">Proyectos</a></li>
-        <li class="nav__link"><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
+      <!-- Section About Me - Step 4 (Section About Me) -->
+      <section class="about__me container" id="about__me">
+        <div class="about__me--texts">
+          <!-- Step 3 (Main Page Title) -->
+          <h1 class="about__me--title">
+            Frontend Developer & <span>UI Designer</span>
+          </h1>
+          <p class="about__me--description">
+            Hello! My name is <span>Juan Felipe Marin Molina</span> from Riwi
+            and I am a Junior software developer, I like to create completely
+            climbing and amazing websites and applications, I am currently
+            focused on web development with technologies such as HTML, CSS and
+            JS.
+          </p>
+          <a class="about__me--button" href="#contact"> Contact Me! </a>
+        </div>
+        <!-- Step 5 (Profile Image) -->
+        <div class="about__me--image">
+          <img src="imgs/img-felipe-marin.png" alt="Imagen Felipe Marin" />
+        </div>
+      </section>
+    </header>
 
-    <!-- Section About Me - Step 4 (Section About Me) -->
-    <section class="about__me container" id="about__me">
-      <div class="about__me--texts">
-        <!-- Step 3 (Main Page Title) -->
-        <h1 class="about__me--title">
-          Desarrollador De Software & <span>UI Designer</span>
-        </h1>
-        <p class="about__me--description">
-          Hola!, mi nombre es <span>Juan Felipe Marin Molina</span> de Riwi y soy desarrollador de software junior,
-          me gusta crear paginas webs y aplicaciones completamente escalabes y asombrosas
-          , actualmente estoy enfocado en el desarrollo web con tecnologias como HTML, CSS y JS.
-        </p>
-        <a class="about__me--button" href="#contact">
-          Contactame!
-        </a>
-      </div>
-      <!-- Step 5 (Profile Image) -->
-      <div class="about__me--image">
-        <img src="imgs/img-felipe-marin.png" alt="Imagen Felipe Marin">
-      </div>
-    </section>
-  </header>
-
-  <!-- Section Skills -->
-  <section class="skills container" id="skills">
-    <h2 class="skills__title title">Habilidades y Tecnologias que manejo</h2>
-
-    <!-- Step 6 (Skills List) -->
-    <ul class="skills__list">
-      <li class="skill">
-        <img src="icons/html5-brands.svg" alt="Icono HTML5">
-        HTML
-      </li>
-      <li class="skill">
-        <img src="icons/css3-alt-brands.svg" alt="Icono CSS3">
-        CSS
-      </li>
-      <li class="skill">
-        <img src="icons/js-brands.svg" alt="Icono JavaScript">
-        JavaScript
-      </li>
-      <li class="skill">
-        <img src="icons/python-brands.svg" alt="Icono Python">
-        Python
-      </li>
-      <li class="skill">
-        <img src="icons/git-alt-brands.svg" alt="Icono Git">
-        Git
-      </li>
-      <li class="skill">
-        <img src="icons/github-brands.svg" alt="Icono GitHub class="skill"">
-        GitHub
-      </li>
-    </ul>
-  </section>
-
-  <!-- Section Projects - Step 7 (Projects Section) -->
-  <section class="projects container" id="projects">
-
-    <!-- Info Projects -->
-    <div class="projects__texts">
-      <h2 class="projects__title title">
-        Proyectos recientes
+    <!-- Section Skills -->
+    <section class="skills container" id="skills">
+      <h2 class="skills__title title">
+        Skills and technologies that management
       </h2>
 
-      <p class="projects__description">
-        A continuacion te mostrare algunos de los 
-        proyectos mas recientes que he desarrollado
-        usando las tecnologias HTML, CSS y JavaScript, 
-        tienes un proyecto en mente?, <a href="#contact">Contactame!</a>
-      </p>
-    </div>
+      <!-- Step 6 (Skills List) -->
+      <ul class="skills__list">
+        <li class="skill">
+          <img src="./imgs/html-5.png" alt="Icono HTML5" />
+          HTML
+        </li>
+        <li class="skill">
+          <img src="./imgs/css-3.png" alt="Icono CSS3" />
+          CSS
+        </li>
+        <li class="skill">
+          <img src="./imgs/logo-js.png" alt="Icono JavaScript" />
+          JavaScript
+        </li>
+        <li class="skill">
+          <img src="./imgs/logo-python.png" alt="Icono Python" />
+          Python
+        </li>
+        <li class="skill">
+          <img src="./imgs/logo-git.png" alt="Icono Git" />
+          Git
+        </li>
+        <li class="skill">
+          <img src="./imgs/github.png" alt="Icono GitHub class="skill""> GitHub
+        </li>
+      </ul>
+    </section>
 
-    <!-- Projects -->
-    <div class="container__projects">
+    <!-- Section Projects - Step 7 (Projects Section) -->
+    <section class="projects container" id="projects">
+      <!-- Info Projects -->
+      <div class="projects__texts">
+        <h2 class="projects__title title">Recent projects</h2>
 
-      <div class="first__project box">
-        <!-- Step 8 (Project Image) -->
-        <img src="imgs/diseño.jpg" alt="Imagen Web Diseño">
-
-        <h3 class="first__project--title box__title">
-          Sitio web de diseños
-        </h3>
-
-        <p class="first__project--description description">
-          Sitio web responsive enfocado a brindar soluciones en arquitectura para los hogares colombianos.
+        <p class="projects__description">
+          I will show you some of the most recent projects than I have developed
+          using HTML, CSS and JavaScript technologies, do you have a project in
+          mind?, <a href="#contact">Contact Me!</a>
         </p>
-
-        <div class="first__project--info project__info">
-          <a href="#" class="first__project--button button">
-            Ir <i class="bi bi-arrow-right"></i>
-          </a>
-
-          <!-- Step 9 (Table) -->
-          <table class="first__project--table"">
-            <tr>
-              <th>Tecnologias Usadas</th>
-            </tr>
-            <tr>
-              <td>HTML</td>
-            </tr>
-            <tr>
-              <td>CSS</td>
-            </tr>
-            <tr>
-              <td>JavaScript</td>
-            </tr>
-          </table>
-        </div>
-
       </div>
 
-      <div class="second__project box">
-        <!-- Step 8 (Project Image) -->
-        <img src="imgs/petology.jpeg" alt="Imagen Web de mascotas">
+      <!-- Projects -->
+      <div class="container__projects">
+        <div class="book box">
+          <div class="book__content">
+            <h3 class="book__content--title">Project Description</h3>
 
-        <h3 class="second__project--title box__title">
-          Veterinaria
-        </h3>
+            <p class="book__content--description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, laborum.
+            </p>
 
-        <p class="second__project--description description">
-          Sitio web desarrollado para una veterinaria local, 
-          que permite registrar mascotas, ver su historia medica
-          y programar revisiones.
-        </p>
-
-        <div class="second__project--info project__info">
-          <a href="#" class="second__project--button button">
-            Ir <i class="bi bi-arrow-right"></i>
-          </a>
-
-          <!-- Step 9 (Table) -->
-          <table class="second__project--table"">
-            <tr>
-              <th>Tecnologias Usadas</th>
-            </tr>
-            <tr>
-              <td>HTML</td>
-            </tr>
-            <tr>
-              <td>CSS</td>
-            </tr>
-            <tr>
-              <td>JavaScript</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-
-      <div class="third__project box">
-        <!-- Step 8 (Project Image) -->
-        <img src="imgs/traveler.jpeg" alt="Imagen Web Agencia De Viajes">
-
-        <h3 class="third__project--title box__title">
-          Agencia de viajes
-        </h3>
-
-        <p class="third__project--description description">
-          Sitio web desarrollado para una agencia de viajes extranjera
-          la cual permite comprar tiquetes y reservar 
-          hoteles (paquetes, promociones, etc.)
-        </p>
-
-        <div class="third__project--info project__info">
-          <a href="#" class="third__project--button button">
-            Ir <i class="bi bi-arrow-right"></i>
-          </a>
-
-          <!-- Step 9 (Table) -->
-          <table class="third__project--table"">
-            <tr>
-              <th>Tecnologias Usadas</th>
-            </tr>
-            <tr>
-              <td>HTML</td>
-            </tr>
-            <tr>
-              <td>Tailwind CSS</td>
-            </tr>
-            <tr>
-              <td>JavaScript</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact container" id="contact">
-    <h2 class="contact__title title">
-      Enviame un mensaje
-    </h2>
-
-    <!-- Contact Info -->
-    <div class="container__contact">
-      <div class="contact__info">
-        <h2 class="contact__info--title">
-          Ponernos en contacto es muy facil!
-        </h2>
-
-        <p class="contact__info--addres">
-          Calle 48C Sur #39a - 165,
-          <br>
-          Medellin, Colombia
-        </p>
-
-        <p class="contact__info--phone">
-          +57 305-484-4782
-        </p>
-
-        <a class="contact__info--email" href="mailto: juanfelipemm2004@gmail.com">
-          juanfelipemm2004@gmail.com
-        </a>
-
-        <!-- Social Media - Step 11 (Social Media Links) -->
-        <div class="contact__info--social-media">
-          <a href="https://facebook.com/" target="_blank">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://instagram.com/" target="_blank">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="https://twitter.com/" target="_blank">
-            <i class="bi bi-twitter"></i>
-          </a>
-          <a href="https://tiktok.com/" target="_blank">
-            <i class="bi bi-tiktok"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Form - Step 10 (Contact Form) --> 
-      <div class="contact__form">
-        <form action="#" method="post">
-          <div class="form__group">
-            <input 
-              type="text" 
-              name="name" 
-              placeholder="Tu nombre..." 
-              required
-            >  
-
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="Tu correo..." 
-              required
-            >
-
-            <textarea name="message" rows="8" cols="10" placeholder="Escribe tu mensaje..." required></textarea>
+            <h3 class="technologies__title">Tecnologias aplicadas</h3>
+            <div class="book__content--technologies">
+              <img src="./imgs/html-5.png" alt="" />
+              <img src="./imgs/css-3.png" alt="" />
+            </div>
+            <!-- From Uiverse.io by Web-Potato -->
+            <button>
+              <span> View Website  </span>
+            </button>
           </div>
-          <input type="submit" value="Enviar formulario">
-        </form>
-      </div>
-    </div>
-  </section>
-  
-  <footer class="footer">
-    <span class="copy">&#169; 2025 | Felipe Marin</span>
-  </footer>
+          <div class="cover">
+            <h2>Homepage Mercado Libre</h2>
 
-  <!-- JavaScript File -->
-  <script src="main.js"></script>
-</body>
+            <span class="cover__span"
+              >See the details <i class="bi bi-hand-index-thumb-fill"></i
+            ></span>
+          </div>
+        </div>
+
+        <div class="book box">
+          <div class="book__content">
+            <h3 class="book__content--title">Project Description</h3>
+
+            <p class="book__content--description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, laborum.
+            </p>
+
+            <h3 class="technologies__title">Tecnologias aplicadas</h3>
+            <div class="book__content--technologies">
+              <img src="./imgs/html-5.png" alt="" />
+              <img src="./imgs/css-3.png" alt="" />
+              <img src="./imgs/logo-js.png" alt="" />
+            </div>
+            <!-- From Uiverse.io by Web-Potato -->
+            <button>
+              <span> View Website  </span>
+            </button>
+          </div>
+          <div class="cover">
+            <h2>Positivus Free Page</h2>
+
+            <span class="cover__span"
+              >See the details <i class="bi bi-hand-index-thumb-fill"></i
+            ></span>
+          </div>
+        </div>
+
+        <div class="book box">
+          <div class="book__content">
+            <h3 class="book__content--title">Project Description</h3>
+
+            <p class="book__content--description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, laborum.
+            </p>
+
+            <h3 class="technologies__title">Tecnologias aplicadas</h3>
+            <div class="book__content--technologies">
+              <img src="./imgs/html-5.png" alt="" />
+              <img src="./imgs/css-3.png" alt="" />
+              <img src="./imgs/logo-js.png" alt="" />
+            </div>
+            <!-- From Uiverse.io by Web-Potato -->
+            <button>
+              <span> View Website  </span>
+            </button>
+          </div>
+          <div class="cover">
+            <h2>Landing Page Chirp</h2>
+
+            <span class="cover__span"
+              >See the details <i class="bi bi-hand-index-thumb-fill"></i
+            ></span>
+          </div>
+        </div>
+
+        <div class="book box">
+          <div class="book__content">
+            <h3 class="book__content--title">Project Description</h3>
+
+            <p class="book__content--description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, laborum.
+            </p>
+
+            <h3 class="technologies__title">Tecnologias aplicadas</h3>
+            <div class="book__content--technologies">
+              <img src="./imgs/html-5.png" alt="" />
+              <img src="./imgs/css-3.png" alt="" />
+            </div>
+            <!-- From Uiverse.io by Web-Potato -->
+            <button>
+              <span> View Website  </span>
+            </button>
+          </div>
+          <div class="cover">
+            <h2>Clipboard Landing Page</h2>
+
+            <span class="cover__span"
+              >See the details <i class="bi bi-hand-index-thumb-fill"></i
+            ></span>
+          </div>
+        </div>
+
+        <div class="book">
+          <div class="book__content">
+            <h3 class="book__content--title">Project Description</h3>
+
+            <p class="book__content--description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, laborum.
+            </p>
+
+            <h3 class="technologies__title">Tecnologias aplicadas</h3>
+            <div class="book__content--technologies">
+              <img src="./imgs/html-5.png" alt="" />
+              <img src="./imgs/css-3.png" alt="" />
+            </div>
+
+            <!-- From Uiverse.io by Web-Potato -->
+            <button>
+              <span> View Website  </span>
+            </button>
+          </div>
+          <div class="cover">
+            <h2>Filo Data Component</h2>
+
+            <span class="cover__span"
+              >See the details <i class="bi bi-hand-index-thumb-fill"></i
+            ></span>
+          </div>
+        </div>
+
+        <div class="book">
+          <div class="book__content">
+            <h3 class="book__content--title">Project Description</h3>
+
+            <p class="book__content--description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, laborum.
+            </p>
+
+            <h3 class="technologies__title">Tecnologias aplicadas</h3>
+            <div class="book__content--technologies">
+              <img src="./imgs/html-5.png" alt="" />
+              <img src="./imgs/css-3.png" alt="" />
+            </div>
+
+            <!-- From Uiverse.io by Web-Potato -->
+            <button>
+              <span> View Website  </span>
+            </button>
+          </div>
+          <div class="cover">
+            <h2>Testimonial Grid Section</h2>
+
+            <span class="cover__span"
+              >See the details <i class="bi bi-hand-index-thumb-fill"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact container" id="contact">
+      <h2 class="contact__title title">Send me a message</h2>
+
+      <!-- Contact Info -->
+      <div class="container__contact">
+        <div class="contact__info">
+          <h2 class="contact__info--title">Getting in touch is too easy!</h2>
+
+          <p class="contact__info--addres">
+            Street 48C Sur #39a - 165,
+            <br />
+            Medellin, Colombia
+          </p>
+
+          <p class="contact__info--phone">+57 305-484-4782</p>
+
+          <a
+            class="contact__info--email"
+            href="mailto: juanfelipemm2004@gmail.com"
+          >
+            juanfelipemm2004@gmail.com
+          </a>
+
+          <!-- Social Media - Step 11 (Social Media Links) -->
+          <div class="contact__info--social-media">
+            <a href="https://facebook.com/" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://instagram.com/" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://tiktok.com/" target="_blank">
+              <i class="bi bi-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form - Step 10 (Contact Form) -->
+        <div class="contact__form">
+          <form action="#" method="post">
+            <div class="form__group">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name..."
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email..."
+                required
+              />
+
+              <textarea
+                name="message"
+                rows="8"
+                cols="10"
+                placeholder="Write your message..."
+                required
+              ></textarea>
+            </div>
+            <input type="submit" value="Enviar formulario" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="copy">&#169; 2025 | Felipe Marin</span>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="main.js"></script>
+  </body>
 </html>
