@@ -45,5 +45,11 @@ Para visualizar el portafolio en tu entorno local, sigue estos pasos:
 
 ```bash
 git clone https://github.com/ProgramaConPid/Personal-Portfolio---FM.git
+```
 
+2. Navega al directorio del proyecto
+```bash
 cd Personal-Portfolio---FM
+```
+
+3. Abre el archivo ```index.html``` en tu navegador preferido para ver el portafolio en acción.
