@@ -18,7 +18,7 @@ El repositorio está organizado de la siguiente manera:
 ├── main.js              # Archivo JavaScript para interactividad
 ├── style.css            # Estilos CSS para el diseño visual
 └── README.md            # Documentación del proyecto
-
+```
 
 ## 🖥️ Secciones del Portafolio
 
