@@ -10,7 +10,7 @@ El objetivo principal de este proyecto es presentar de manera estructurada y atr
 
 El repositorio está organizado de la siguiente manera:
 
-/
+```graphql
 ├── .vscode/             # Configuración del entorno de desarrollo
 ├── imgs/                # Imágenes utilizadas en el portafolio
 ├── icons/               # Iconos personalizados
