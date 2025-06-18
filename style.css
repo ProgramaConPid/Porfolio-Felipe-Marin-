@@ -462,7 +462,7 @@ textarea {
 }
 
 /* From Uiverse.io by Web-Potato */ 
-button {
+.book__content--btn {
   padding: 0.1em 0.25em;
   width: 13em;
   height: 4.2em;
@@ -473,7 +473,7 @@ button {
   cursor: pointer;
 }
 
-button span {
+.book__content--btn a {
   position: relative;
   display: flex;
   justify-content: center;
@@ -489,13 +489,13 @@ button span {
   box-shadow: 0 0.4em 0.1em 0.019em #fff;
 }
 
-button span:hover {
+.book__content--btn a:hover {
   transition: all 0.5s;
   transform: translate(0, 0.4em);
   box-shadow: 0 0 0 0 #fff;
 }
 
-button span:not(hover) {
+.book__content--btn a:not(hover) {
   transition: all 1s;
 }
 
