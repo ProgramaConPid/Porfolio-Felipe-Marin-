@@ -150,35 +150,356 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2rem;
 }
 
-.about__me--title {
-  font-size: clamp(30px, 7vw, 60px);
+/* From Uiverse.io by drewsephski */ 
+.card {
+  padding: 0.75rem;
+  overflow: hidden;
+  border: 0.25px solid #c5c5c5;
+  border-radius: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(800px);
+  box-shadow: 0 0 30px 5px var(--soft-blue);
+  min-width: 344px;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+  border: 0.5px solid #525252;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.terminal {
+  display: flex;
+  flex-direction: column;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  min-height: 40px;
+  padding-inline: 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #202425;
 }
 
-.about__me--title span {
-  color: var(--soft-blue);
-  letter-spacing: .2rem;
+.terminal__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 2.5rem;
+  user-select: none;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #8e8e8e;
 }
 
-.about__me--description {
-  color: var(--grey);
-  width: 90%;
-  font-size: clamp(18px, 3vw, 22px);
-  margin: 3rem 0;
-  line-height: 1.4;
+.terminal__title > svg {
+  height: 18px;
+  width: 18px;
+  margin-top: 2px;
+  color: #006adc;
 }
 
-.about__me--description span {
-  color: var(--soft-blue);
-  font-size: 20px;
-  font-weight: 800;
+.copy_toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  border: 0.65px solid darkgrey;
+  margin-left: auto;
+  border-radius: 6px;
+  background-color: #202425;
+  color: #8e8e8e;
+  cursor: pointer;
+  box-shadow: 0 0 15px deepskyblue;
+}
+
+.copy_toggle > svg {
+  width: 15px;
+  height: 15px;
+  box-shadow: 0 0 40px 2.5px blue;
+  animation: bounce;
+}
+.copy_toggle:active > svg > path,
+.copy_toggle:focus-within > svg > path {
+  animation: clipboard-check 5000ms linear forwards;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  overflow-x: auto;
+  padding: 1rem;
+  line-height: 20px;
+  color: white;
+  background-color: black;
+  white-space: nowrap;
+}
+.pre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-wrap: nowrap;
+  white-space: pre;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.pre code:nth-child(1) {
+  color: #575757;
+}
+.pre code:nth-child(2) {
+  color: #e34ba9;
+}
+
+.code {
+  display: grid;
+  gap: .5rem;
+}
+
+.cmd {
+  height: 19px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.cmd::before {
+  content: attr(data-cmd);
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  animation: inputs 8s steps(22) infinite;
+}
+.cmd::after {
+  content: "_";
+  position: relative;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  border-right: 0.15em solid #e34ba9;
+  animation: cursor 0.5s step-end infinite alternate, blinking 0.4s infinite;
+}
+
+@keyframes blinking {
+  20%,
+  80% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+}
+@keyframes cursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+@keyframes inputs {
+  0%,
+  100% {
+    width: 0;
+  }
+  10%,
+  90% {
+    width: 58px;
+  }
+  30%,
+  70% {
+    width: 215px;
+    max-width: max-content;
+  }
+}
+@keyframes clipboard-check {
+  100% {
+    color: deepskyblue;
+    d: path(
+      "M 9 5 H 7 a 2 2 0 0 0 -2 2 v 12 a 2 2 0 0 0 2 2 h 10 a 2 2 0 0 0 2 -2 V 7 a 2 2 0 0 0 -2 -2 h -2 M 9 5 a 2 2 0 0 0 2 2 h 2 a 2 2 0 0 0 2 -2 M 9 5 a 2 2 0 0 1 2 -2 h 2 a 2 2 0 0 1 2 2 m -6 9 l 2 2 l 4 -4"
+    );
+  }
+}
+
+/* From Uiverse.io by Yaya12085 */ 
+.code-editor {
+  max-width: 350px;
+  background-color: #1d1e22;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.code__editor--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.code__editor--title {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1.57px;
+  color: rgb(212 212 212);
+}
+
+.icon {
+  width: 20px;
+  transition: .2s ease;
+}
+
+.icon:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #6e7281;
+}
+
+.editor-content {
+  margin: 0 10px 10px;
+  color: white;
+}
+
+.property {
+  margin-left: 30px;
+}
+
+.property:hover {
+  cursor: text;
+}
+
+.editor-content .color-0 {
+  color: rgb(86 156 214);
+}
+
+.editor-content .color-1 {
+  color: rgb(182 206 168);
+}
+
+.editor-content .color-2 {
+  color: rgb(156 220 254);
+}
+
+.editor-content .color-3 {
+  color: rgb(207 146 120);
+}
+
+.color-preview-1,.color-preview-2 {
+  height: 8px;
+  width: 8px;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.color-preview-1 {
+  background-color: #1d1e22;
+}
+
+.color-preview-1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* From Uiverse.io by Yaya12085 */ 
+.code-editor {
+  max-width: 300px;
+  background-color: #1d1e22;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.title {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1.57px;
+  color: rgb(212 212 212);
+}
+
+.icon {
+  width: 20px;
+  transition: .2s ease;
+}
+
+.icon:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #6e7281;
+}
+
+.editor-content {
+  margin: 0 10px 10px;
+  color: white;
+}
+
+.property {
+  margin-left: 30px;
+}
+
+.property:hover {
+  cursor: text;
+}
+
+.editor-content .color-0 {
+  color: rgb(86 156 214);
+}
+
+.editor-content .color-1 {
+  color: rgb(182 206 168);
+}
+
+.editor-content .color-2 {
+  color: rgb(156 220 254);
+}
+
+.editor-content .color-3 {
+  color: rgb(207 146 120);
+}
+
+.color-preview-1,.color-preview-2 {
+  height: 8px;
+  width: 8px;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.color-preview-1 {
+  background-color: #1d1e22;
+}
+
+.color-preview-1 {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .about__me .about__me--image img {
   display: block;
   width: 600px;
-  height: 600px;
+  height: 550px;
   filter: drop-shadow(6px 6px 6px var(--soft-blue));
   transform: scale(1.1);
 
